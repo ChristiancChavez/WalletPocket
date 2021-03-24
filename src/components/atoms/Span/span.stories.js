@@ -8,9 +8,9 @@ export default {
     component: Span
 }
 
-export const userName = () => <Span fontSize="user" weight="" color="">userName</Span>
-export const title = () => <Span fontSize="title" weight="" color="">title</Span>
-export const subTitle = () => <Span fontSize="subtitle" weight="" color="">subTitle</Span>
-export const category = () => <Span fontSize="category" weight="" color="">category</Span>
-export const message = () => <Span fontSize="message" weight="" color="">message</Span>
-export const pocketTitle = () => <Span weight="" color="">pocketTitle</Span>
+export const userName = () => <Span fontSize="user">Christian Camilo</Span>
+export const title = () => <Span fontSize="title" weight="title"> Create Pocket</Span>
+export const subTitle = () => <Span fontSize="subtitle" color="subtitle">$200.000</Span>
+export const category = () => <Span fontSize="category" weight="category">Entertainment</Span>
+export const message = () => <Span fontSize="message" color="message">How much money do you want to add?</Span>
+export const pocketTitle = () => <Span>Partys</Span>

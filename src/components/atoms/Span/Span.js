@@ -1,14 +1,16 @@
 import React from 'react';
+// Styles
+import StyledSpan from './span.styles';
 
 const Span = ({ children, fontSize, weight, color }) => {
     return (
-        <span 
+        <StyledSpan 
             fontSize={fontSize}
             weight={weight}
             color={color}
         >
             {children}
-        </span>
+        </StyledSpan>
     );
 };
 
