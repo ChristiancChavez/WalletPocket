@@ -6,7 +6,6 @@ import StyledSvg from './icon.styles';
 
 const Icon = ({ name, onClick = () => {} }) => (
     <StyledSvg
-        className={`icon icon-${name}`}
         onClick={onClick}
     >
         <use xlinkHref={`#icon-${name}`} />

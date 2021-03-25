@@ -3,11 +3,12 @@ import React from 'react';
 import Icon from '../Icon/Icon';
 // Styles 
 import StyledButonIcon from './buttonIcon.styles';
-const ButtonIcon = ({ children, icon }) => {
+import IconsCollection from '../../../Helpers/IconsCollection';
+const ButtonIcon = ({ name }) => {
     return (
         <StyledButonIcon>
-            <Icon name={icon} />
-            {children}
+            <IconsCollection />
+            <Icon name={name} />
         </StyledButonIcon>
     );
 };

@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import IconsCollection from './Helpers/IconsCollection';
 
 function App() {
   return (
     <div className="App">
+      <IconsCollection />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
