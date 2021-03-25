@@ -3,11 +3,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // Components
 import StyledSvg from './icon.styles';
+import IconsCollection from '../../../Helpers/IconsCollection';
 
 const Icon = ({ name, onClick = () => {} }) => (
     <StyledSvg
         onClick={onClick}
     >
+        <IconsCollection />
         <use xlinkHref={`#icon-${name}`} />
     </StyledSvg>
 );

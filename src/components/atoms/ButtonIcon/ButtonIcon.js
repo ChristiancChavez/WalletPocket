@@ -4,9 +4,9 @@ import Icon from '../Icon/Icon';
 // Styles 
 import StyledButonIcon from './buttonIcon.styles';
 import IconsCollection from '../../../Helpers/IconsCollection';
-const ButtonIcon = ({ name }) => {
+const ButtonIcon = ({ name, border, borderHover }) => {
     return (
-        <StyledButonIcon>
+        <StyledButonIcon border={border} borderHover={borderHover} >
             <IconsCollection />
             <Icon name={name} />
         </StyledButonIcon>
