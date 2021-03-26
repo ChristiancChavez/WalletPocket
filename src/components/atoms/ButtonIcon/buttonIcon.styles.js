@@ -24,7 +24,7 @@ const StyledButonIcon = styled.button`
     height: 50px;
     padding: 5px;
     border: ${props => border(props)};
-    border-radius: 5px;
+    border-radius: 4px;
     &:hover {
         border: ${props => borderHover(props)};
     }
