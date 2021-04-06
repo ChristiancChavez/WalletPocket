@@ -1,25 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import IconsCollection from './Helpers/IconsCollection';
+// Components 
+import ProgressPocket from './components/molecules/ProgressPocket/ProgressPocket';
 
 function App() {
   return (
     <div className="App">
       <IconsCollection />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Wallet Pocket</h1>
+      <ProgressPocket />
     </div>
   );
 }
