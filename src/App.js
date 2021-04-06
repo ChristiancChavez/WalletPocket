@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-import IconsCollection from './Helpers/IconsCollection';
+import logo from "./logo.svg";
+import "./App.css";
+import IconsCollection from "./Helpers/IconsCollection";
 
 function App() {
   return (
