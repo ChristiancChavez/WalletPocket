@@ -11,7 +11,7 @@ const textSize = (props) => {
       spanText = "18px";
       break;
     case "category":
-      spanText = "12px";
+      spanText = "18px";
       break;
     case "message":
       spanText = "19px";
