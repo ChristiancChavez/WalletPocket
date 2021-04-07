@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import StyledSvg from "./icon.styles";
 import IconsCollection from "../../../Helpers/IconsCollection";
 
-const Icon = ({ name, onClick = () => {} }) => (
-  <StyledSvg onClick={onClick}>
+const Icon = ({ name, position,  onClick = () => {} }) => (
+  <StyledSvg onClick={onClick} position={position}>
     <IconsCollection />
     <use xlinkHref={`#icon-${name}`} />
   </StyledSvg>
@@ -15,6 +15,7 @@ const Icon = ({ name, onClick = () => {} }) => (
 Icon.propTypes = {
   name: PropTypes.string.isRequired,
   className: PropTypes.string,
+  position: PropTypes.bool,
   onClick: PropTypes.func,
 };
 

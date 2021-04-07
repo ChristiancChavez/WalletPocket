@@ -15,13 +15,13 @@ const PocketProgress = ({ progress, percentage }) => {
                             <StyledCircleRail r="67" cx="75" cy="75"></StyledCircleRail>
                             <StyledCircleProgress r="67" cx="75" cy="75" percentage={percentage}></StyledCircleProgress>
                         </StyledSvgBar>
-                        <Icon name="glass2" />
+                        <Icon name="glass2" position />
                     </StyledContainerSvg>
                 )
                 :
                 (   
                     <StyledCategoryPocket>
-                        <Icon name="glass2" />
+                        <Icon name="glass2" position />
                         <StyledSpan>
                             <Span children="Entertainment" fontSize="category"/>
                         </StyledSpan>

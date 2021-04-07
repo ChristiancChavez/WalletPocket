@@ -7,10 +7,16 @@ const StyledSvg = styled.svg`
     display: inline-block;
     stroke-width: 0;
     stroke: black;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    ${(props) => {
+        if(props.position) {
+            return `
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);`
+        }
+    }}
+    
 `
 
 export default StyledSvg;
