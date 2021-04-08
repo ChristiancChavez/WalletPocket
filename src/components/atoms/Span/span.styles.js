@@ -20,7 +20,7 @@ const textSize = (props) => {
       spanText = "20px";
       break;
     case "subtitle":
-      spanText = "13px";
+      spanText = "18px";
       break;
     default:
       spanText = "15px";
@@ -32,19 +32,7 @@ const textColor = (props) => {
   if (!props.color) {
     return "black";
   }
-
-  let spanColor;
-  switch (props.color) {
-    case "message":
-      spanColor = "gray";
-      break;
-    case "subtitle":
-      spanColor = "lightgray";
-      break;
-    default:
-      spanColor = "black";
-  }
-  return spanColor;
+  return props.color;
 };
 
 const textWeight = (props) => {
@@ -71,6 +59,7 @@ const StyledSpan = styled.span`
   font-size: ${(props) => textSize(props)};
   color: ${(props) => textColor(props)};
   font-weight: ${(props) => textWeight(props)};
+  margin-left: 10px;
 `;
 
 export default StyledSpan;

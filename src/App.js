@@ -9,11 +9,14 @@ function App() {
     <div className="App">
       <IconsCollection />
       <h1>Wallet Pocket</h1>
-      <ProgressPocket />
+      <ProgressPocket icon="plus" category="Other" />
+      <ProgressPocket icon="airplane" category="Travel" />
       <h1> diferencias entre los dos pocket progress</h1>
-      <ProgressPocket progress  percentage={80} />
+      <ProgressPocket progress percentage="80" icon="airplane" category="Travel" />
+      <ProgressPocket progress percentage="94" icon="home" category="Home" />
       <h1> Pocket info</h1>
-      <PocketInfo />
+      <PocketInfo icon="glass2" name="Parties" percentage="61" money="250.000" />
+      <PocketInfo icon="plus" name="Computer" percentage="34" money="3.000.000" />
     </div>
   );
 }

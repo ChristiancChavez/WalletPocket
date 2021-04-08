@@ -1,17 +1,18 @@
 import React from 'react';
 // Components
 import Span from '../../atoms/Span/Span';
-import Icon from '../../atoms/Icon/Icon';
+import Quantity from '../../atoms/Quantity/Quantity';
+import PocketProgress from './../ProgressPocket/ProgressPocket';
 // Styles
 import { StyledPocketInfo, StyledMoneyGoal } from './pocketInfo.styles';
 
-const PocketInfo = () => {
+const PocketInfo = ({ icon, name, percentage, money }) => {
     return (
         <StyledPocketInfo>
-            <Span fontSize="subtitle" children="Parties" />
+            <PocketProgress icon={icon} progress percentage={percentage} />
             <StyledMoneyGoal>
-                <Icon name="glass2" />
-                <Span children="200.000" />
+                <Span fontSize="subtitle" children={name} />
+                <Quantity children={money} weight={900} fontSize="20" />
             </StyledMoneyGoal>
         </StyledPocketInfo>
     );
