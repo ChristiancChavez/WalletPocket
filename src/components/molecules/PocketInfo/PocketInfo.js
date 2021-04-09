@@ -11,8 +11,8 @@ const PocketInfo = ({ icon, name, percentage, money }) => {
         <StyledPocketInfo>
             <PocketProgress icon={icon} progress percentage={percentage} />
             <StyledMoneyGoal>
-                <Span fontSize="subtitle" children={name} />
-                <Quantity children={money} weight={900} fontSize="20" />
+                <Span fontSize="subtitle" children={name} color="gray" />
+                <Quantity children={money} weight="bold" fontSize="20" />
             </StyledMoneyGoal>
         </StyledPocketInfo>
     );
