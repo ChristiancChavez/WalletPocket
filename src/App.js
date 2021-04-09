@@ -3,6 +3,7 @@ import IconsCollection from './Helpers/IconsCollection';
 // Components 
 import ProgressPocket from './components/molecules/ProgressPocket/ProgressPocket';
 import PocketInfo from './components/molecules/PocketInfo/PocketInfo';
+import PocketAddition from './components/molecules/PocketAddition/PocketAddition';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
       <h1> Pocket info</h1>
       <PocketInfo icon="glass2" name="Parties" percentage="61" money="250.000" />
       <PocketInfo icon="plus" name="Computer" percentage="34" money="3.000.000" />
+      <h1>Pocket addition</h1>
+      <PocketAddition quantity="200.000" />
     </div>
   );
 }

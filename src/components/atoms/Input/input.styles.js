@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-const defaultSize = "15px";
-const inputSize = (props) => {
-  if (!props.size) {
-    return defaultSize;
-  }
-  return props.size;
-};
-
 const textColor = (props) => {
   if (!props.variantStyle) return "black";
   let textColor;
@@ -19,7 +11,7 @@ const textColor = (props) => {
       textColor = "black";
       break;
     case "addition":
-      textColor = "lightgray";
+      textColor = "#25265e";
       break;
     default:
       textColor = "black";
@@ -34,6 +26,8 @@ const StyledInput = styled.input`
   color: ${(props) => textColor(props)};
   border-bottom: 1px solid lightgray;
   outline: none;
-  width: ${(props) => inputSize(props)};
+  width: 100%;
+  font-size: 15px;
+  margin: 5px;
 `;
 export default StyledInput;

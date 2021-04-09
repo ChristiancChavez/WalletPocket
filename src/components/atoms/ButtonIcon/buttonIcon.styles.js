@@ -20,13 +20,15 @@ const StyledButonIcon = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 5px 10px;
   border: ${(props) => border(props)};
-  border-radius: 4px;
+  border-radius: 50%;
+  margin: 0 3px;
   &:hover {
     border: ${(props) => borderHover(props)};
+    background: lightgray;
   }
 `;
 

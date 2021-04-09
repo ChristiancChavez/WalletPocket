@@ -1,12 +1,22 @@
 import styled from "styled-components";
 
+const sizeSvg = (props) => {
+    if(!props.size) return '30px';
+    return `${props.size}px`
+};
+
+const iconColor = (props) => {
+    if(!props.color) return 'black';
+    return props.color
+};
+
+
+
 const StyledSvg = styled.svg`
-    width: 30px;
-    height: 30px;
-    fill: black;
+    width: ${(props) => sizeSvg(props)};
+    height: ${(props) => sizeSvg(props)};
+    fill: ${(props) => iconColor(props)};
     display: inline-block;
-    stroke-width: 0;
-    stroke: black;
     ${(props) => {
         if(props.position) {
             return `
@@ -16,7 +26,6 @@ const StyledSvg = styled.svg`
             transform: translate(-50%, -50%);`
         }
     }}
-    
 `
 
 export default StyledSvg;
