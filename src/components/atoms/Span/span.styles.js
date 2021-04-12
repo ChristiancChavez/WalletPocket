@@ -59,7 +59,6 @@ const StyledSpan = styled.span`
   font-size: ${(props) => textSize(props)};
   color: ${(props) => textColor(props)};
   font-weight: ${(props) => textWeight(props)};
-  margin-left: 10px;
 `;
 
 export default StyledSpan;

@@ -16,8 +16,8 @@ const PocketAddition = ({ quantity }) => {
             </StyledContainerIcons>
             <StyledQuantityAdded>
                 <Input variantStyle="addition" placeholder="Pocket's recharge" />
-                <ButtonIcon name="checkmark" size="20" color="green" />
-                <ButtonIcon name="cross" size="16" color="red" />
+                <ButtonIcon name="checkmark" size="17" color="green" />
+                <ButtonIcon name="cross" size="15" color="red" />
             </StyledQuantityAdded>
         </StyledContainerAddition>
     );

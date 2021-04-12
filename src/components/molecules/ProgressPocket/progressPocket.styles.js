@@ -13,6 +13,7 @@ export const StyledDivBar = styled.div`
     flex-flow: column;
     align-items: center;
     position: relative;
+    margin: 5px;
 `
 
 export const StyledContainerSvg = styled.div`

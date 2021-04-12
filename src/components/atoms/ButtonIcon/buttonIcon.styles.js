@@ -22,7 +22,7 @@ const StyledButonIcon = styled.button`
   cursor: pointer;
   width: 40px;
   height: 40px;
-  padding: 5px 10px;
+  padding: 5px 12px;
   border: ${(props) => border(props)};
   border-radius: 50%;
   margin: 0 3px;
