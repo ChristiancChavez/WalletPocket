@@ -9,11 +9,10 @@ export default {
 };
 
 export const userInput = () => (
-  <Input size="200px" type="text" variantStyle="initial" placeholder="User" />
+  <Input type="text" variantStyle="initial" placeholder="User" />
 );
 export const walletInput = () => (
   <Input
-    size="200px"
     type="number"
     variantStyle="initial"
     placeholder="Wallet's money"
@@ -21,7 +20,6 @@ export const walletInput = () => (
 );
 export const namePocketInput = () => (
   <Input
-    size="150px"
     type="text"
     variantStyle="pocket"
     placeholder="Pocket's name"
@@ -29,7 +27,6 @@ export const namePocketInput = () => (
 );
 export const moneyPocketInput = () => (
   <Input
-    size="150px"
     type="number"
     variantStyle="pocket"
     placeholder="Pocket's money"
@@ -37,7 +34,6 @@ export const moneyPocketInput = () => (
 );
 export const addMoneyPocketInput = () => (
   <Input
-    size="180px"
     type="number"
     variantStyle="addition"
     placeholder="Amount of money to add"
@@ -45,7 +41,6 @@ export const addMoneyPocketInput = () => (
 );
 export const addMoneyWalletInput = () => (
   <Input
-    size="180px"
     type="number"
     variantStyle="addition"
     placeholder="Amount of money to add"
