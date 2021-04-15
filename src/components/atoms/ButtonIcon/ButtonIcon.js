@@ -4,11 +4,11 @@ import Icon from "../Icon/Icon";
 // Styles
 import StyledButonIcon from "./buttonIcon.styles";
 import IconsCollection from "../../../Helpers/IconsCollection";
-const ButtonIcon = ({ name, border, borderHover }) => {
+const ButtonIcon = ({ name, size, color }) => {
   return (
-    <StyledButonIcon border={border} borderHover={borderHover}>
+    <StyledButonIcon>
       <IconsCollection />
-      <Icon name={name} />
+      <Icon name={name} size={size} color={color} />
     </StyledButonIcon>
   );
 };

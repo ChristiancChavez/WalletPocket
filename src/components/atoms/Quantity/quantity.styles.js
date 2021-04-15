@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
-const fonSizeDefault = "16px";
-const fonWeightDefault = 600;
+const fontSizeDefault = "16px";
+const fontWeightDefault = 600;
 const fontSize = (props) => {
   if (!props.fontSize) {
-    return fonSizeDefault;
+    return fontSizeDefault;
   }
-  return props.fontSize;
+  return `${props.fontSize}px`;
 };
 
 const fontWeight = (props) => {
   if (!props.weight) {
-    return fonWeightDefault;
+    return fontWeightDefault;
   }
   return props.weight;
 };
@@ -21,6 +21,7 @@ const StyledQuantity = styled.span`
   color: #25265e;
   font-size: ${(props) => fontSize(props)};
   font-weight: ${(props) => fontWeight(props)};
+  margin-left: 10px;
 `;
 
 export default StyledQuantity;

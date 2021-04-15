@@ -1,32 +1,18 @@
 import styled from "styled-components";
 
-const withoutBorder = "none";
-
-const border = (props) => {
-  if (!props.border) {
-    return withoutBorder;
-  }
-  return props.border;
-};
-const borderHover = (props) => {
-  if (!props.borderHover) {
-    return withoutBorder;
-  }
-  return props.borderHover;
-};
 
 const StyledButonIcon = styled.button`
   background: transparent;
   border: none;
   outline: none;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
-  padding: 5px;
-  border: ${(props) => border(props)};
-  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  padding: 5px 12px;
+  border-radius: 50%;
+  margin: 0 3px;
   &:hover {
-    border: ${(props) => borderHover(props)};
+    background: lightgray;
   }
 `;
 

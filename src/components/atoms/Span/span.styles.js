@@ -11,7 +11,7 @@ const textSize = (props) => {
       spanText = "18px";
       break;
     case "category":
-      spanText = "12px";
+      spanText = "18px";
       break;
     case "message":
       spanText = "19px";
@@ -20,7 +20,7 @@ const textSize = (props) => {
       spanText = "20px";
       break;
     case "subtitle":
-      spanText = "13px";
+      spanText = "18px";
       break;
     default:
       spanText = "15px";
@@ -32,19 +32,7 @@ const textColor = (props) => {
   if (!props.color) {
     return "black";
   }
-
-  let spanColor;
-  switch (props.color) {
-    case "message":
-      spanColor = "gray";
-      break;
-    case "subtitle":
-      spanColor = "lightgray";
-      break;
-    default:
-      spanColor = "black";
-  }
-  return spanColor;
+  return props.color;
 };
 
 const textWeight = (props) => {
