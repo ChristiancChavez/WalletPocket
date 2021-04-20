@@ -18,7 +18,7 @@ export  const StyledContainerIcons = styled.div`
 export const StyledQuantityAdded = styled(StyledContainerAddition)`
     position: absolute;
     top: -1px;
-    right: 47%;
+    right: 70%;
     background: white;
     box-shadow: 0 0 15px 2px grey;;
     padding: 5px 10px;
