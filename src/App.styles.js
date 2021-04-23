@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledAppContainer = styled.div`
-    width: 400px;
+    width: 500px;
     height: 500px;
-    padding: 15px;
+    padding: 30px 50px;
     border: 2px solid lightgray;
     box-shadow: 0 0 15px 2px grey;
     border-radius: 12px;

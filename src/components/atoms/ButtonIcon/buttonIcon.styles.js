@@ -8,9 +8,9 @@ const StyledButonIcon = styled.button`
   cursor: pointer;
   width: 40px;
   height: 40px;
-  padding: 5px 12px;
+  //padding: 5px 12px;
   border-radius: 50%;
-  margin: 0 3px;
+  margin: 0;
   &:hover {
     background: lightgray;
   }

@@ -16,7 +16,6 @@ const StyledSvg = styled.svg`
     width: ${(props) => sizeSvg(props)};
     height: ${(props) => sizeSvg(props)};
     fill: ${(props) => iconColor(props)};
-    display: inline-block;
     ${(props) => {
         if(props.position) {
             return `

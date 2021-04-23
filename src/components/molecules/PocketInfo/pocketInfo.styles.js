@@ -11,5 +11,5 @@ export const StyledMoneyGoal = styled.div`
     justify-content: space-around;
     align-items: center;
     position: relative;
-    width: 200px;
+    margin: 15px;
 `

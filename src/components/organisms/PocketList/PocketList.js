@@ -9,7 +9,7 @@ import { StyledContainerPocket, StyledContainerMessage } from './pocketList.styl
 const PocketList = () => {
     return (
         <StyledContainerPocket>
-            <PocketInfo />
+            <PocketInfo icon="airplane" name="Travel to Cartagena" percentage={25} money={1000000} />
             <PocketAddition />
             <StyledContainerMessage>
                 <ModalMessage>¿Are you sure?, You'll remove this pocket</ModalMessage>

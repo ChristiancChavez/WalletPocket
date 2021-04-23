@@ -12,3 +12,10 @@ export const StyledModaliv = styled.div`
     width: 200px;
     text-align: center;
 `
+export const StyledButtons = styled.div`
+    display: flex; 
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+`
