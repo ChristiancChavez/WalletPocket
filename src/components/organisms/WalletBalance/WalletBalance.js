@@ -10,8 +10,8 @@ import { StyledBalance, StyledContainerBalance } from './walletBalance.styles';
 const WalletBalance = () => {
     return (
         <StyledBalance>
-            <Icon name="wallet" />
-            <Quantity weight={800} fontSize="35" >2.000.000</Quantity>
+            <Icon name="wallet" color="gray" size={25} marginTop={7} />
+            <Quantity weight={800} fontSize="40" >2.000.000</Quantity>
             <ButtonIcon name="coin-dollar" size="25" />
             <StyledContainerBalance>
                 <ModalMessage quantity />

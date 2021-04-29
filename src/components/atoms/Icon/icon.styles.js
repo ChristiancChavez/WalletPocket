@@ -5,14 +5,25 @@ const sizeSvg = (props) => {
     return `${props.size}px`
 };
 
+const marginTop = (props) => {
+    if(!props.marginTop) return 0;
+    return `${props.marginTop}px`
+};
+
 const iconColor = (props) => {
     if(!props.color) return 'black';
     return props.color
 };
 
+export const StyledDiv = styled.div`
+    display: flex;
+    margin-top: ${(props) => marginTop(props)};
+    justify-content: center;
+    flex-flow: row;
+    align-items: center;
+`
 
-
-const StyledSvg = styled.svg`
+export const StyledSvg = styled.svg`
     width: ${(props) => sizeSvg(props)};
     height: ${(props) => sizeSvg(props)};
     fill: ${(props) => iconColor(props)};
@@ -26,5 +37,3 @@ const StyledSvg = styled.svg`
         }
     }}
 `
-
-export default StyledSvg;

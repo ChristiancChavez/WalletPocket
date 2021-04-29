@@ -6,11 +6,13 @@ const StyledButonIcon = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
-  //padding: 5px 12px;
+  padding: 10px;
   border-radius: 50%;
   margin: 0;
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  justify-content: center;
   &:hover {
     background: lightgray;
   }

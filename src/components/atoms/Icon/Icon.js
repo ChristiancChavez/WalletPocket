@@ -2,14 +2,16 @@ import React from "react";
 // Dependencies
 import PropTypes from "prop-types";
 // Components
-import StyledSvg from "./icon.styles";
+import { StyledSvg, StyledDiv } from "./icon.styles";
 import IconsCollection from "../../../Helpers/IconsCollection";
 
-const Icon = ({ name, position, size, color, onClick = () => {} }) => (
-  <StyledSvg onClick={onClick} position={position} size={size} color={color}>
-    <IconsCollection />
-    <use xlinkHref={`#icon-${name}`} />
-  </StyledSvg>
+const Icon = ({ name, position, size, color, marginTop, onClick = () => {} }) => (
+  <StyledDiv marginTop={marginTop}>
+    <StyledSvg onClick={onClick} position={position} size={size} color={color} >
+      <IconsCollection />
+      <use xlinkHref={`#icon-${name}`} />
+    </StyledSvg>
+  </StyledDiv>
 );
 
 Icon.propTypes = {

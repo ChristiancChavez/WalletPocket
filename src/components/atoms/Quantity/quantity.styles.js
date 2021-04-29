@@ -21,7 +21,7 @@ const StyledQuantity = styled.span`
   color: #25265e;
   font-size: ${(props) => fontSize(props)};
   font-weight: ${(props) => fontWeight(props)};
-  margin: 0;
+  margin: 0 5px;
 `;
 
 export default StyledQuantity;
