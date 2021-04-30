@@ -11,6 +11,7 @@ export const StyledContainerPocket = styled.div`
     border-radius: 8px;
     margin: 15px auto;
     padding: 5px 10px;
+    z-index: 5;
     :hover {
         transform: scale(1.1, 1.1);
     }

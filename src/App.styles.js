@@ -10,4 +10,8 @@ export const StyledAppContainer = styled.div`
     background: whitesmoke;
     margin: 30px auto;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column nowrap;
 `
