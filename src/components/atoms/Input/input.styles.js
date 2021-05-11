@@ -27,7 +27,8 @@ const StyledInput = styled.input`
   border-bottom: 1px solid lightgray;
   outline: none;
   width: 100%;
-  font-size: 15px;
+  font-size: 17px;
   margin: 5px;
+  margin-left: 10px;
 `;
 export default StyledInput;

@@ -1,15 +1,13 @@
 import { StyledAppContainer } from './App.styles.js';
 import IconsCollection from './Helpers/IconsCollection';
-// Components 
-import Background from './components/templates/Background/Background';
-import PocketList from './components/organisms/PocketList/PocketList';
+// Components
+import InitialLogin from './components/templates/InitialLogin/InitialLogin';
 
 function App() {
   return (
     <StyledAppContainer>
       <IconsCollection />
-      <Background />
-      <PocketList />
+      <InitialLogin />
     </StyledAppContainer>
   );
 }
