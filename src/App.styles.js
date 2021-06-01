@@ -4,7 +4,7 @@ import background from './Helpers/Images/backgorund.png';
 export const StyledAppContainer = styled.div`
     width: 400px;
     height: 500px;
-    padding: 30px 50px;
+    padding: 0;
     border: 8px solid black;
     box-shadow: 0 0 15px 2px grey;
     border-radius: 12px;
