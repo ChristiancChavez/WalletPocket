@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const StyledDivAccessPocket = styled.div`
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     align-items: center;
-    margin-top: 50px;
+    justify-content: space-around;
+    margin: 50px;
 `

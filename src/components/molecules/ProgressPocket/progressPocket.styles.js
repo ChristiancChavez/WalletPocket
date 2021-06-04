@@ -48,19 +48,20 @@ export const StyledCategoryPocket = styled.div`
     width: 60px;
     height: 60px;
     border-radius: 8px;
-    background: transparent;
-    border:  1px solid lightgray;
-    box-shadow: 0 0 15px 2px gray;
+    background: white;
+    border:  none;
+    box-shadow: 0 0 15px 2px black;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: flex-end;
     cursor: pointer;
+    margin: 20px 15px;
     &:hover {
         box-shadow: none;
     }
 `
 export const StyledSpan = styled.div`
 position: absolute;
-bottom: -27px;
+bottom: -20px;
 `

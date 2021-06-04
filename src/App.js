@@ -1,13 +1,15 @@
 import { StyledAppContainer } from './App.styles.js';
 import IconsCollection from './Helpers/IconsCollection';
 // Componentsguatame
-import Home from './components/templates/Home/Home';
+import PocketCategories from './components/templates/PocketCategories/PocketCategories';
+import Span from './components/atoms/Span/Span.js';
 
 function App() {
   return (
     <StyledAppContainer>
       <IconsCollection />
-      <Home />
+      <Span fontSize="titleApp" weight="title" color="white">WALLET APP</Span>
+      <PocketCategories />
     </StyledAppContainer>
   );
 }

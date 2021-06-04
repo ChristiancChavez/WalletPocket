@@ -13,9 +13,10 @@ export const StyledAppContainer = styled.div`
     position: relative;
     overflow: hidden;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
     background-image: url(${background});
     background-repeat: no-repeat;
     background-size: 500px 570px;
+    padding-top: 40px;
 `

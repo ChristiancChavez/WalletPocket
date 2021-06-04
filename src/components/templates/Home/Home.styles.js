@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 export const StyledDivHome = styled.div`
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     display: relative;
-    align-items: center;
-    justify-items: flex-start;
+    align-content: center;
+    justify-content: center;
+    margin-top: 30%;
 `

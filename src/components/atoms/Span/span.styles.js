@@ -22,6 +22,9 @@ const textSize = (props) => {
     case "subtitle":
       spanText = "18px";
       break;
+      case "titleApp":
+      spanText = "40px";
+      break;
     default:
       spanText = "15px";
   }
