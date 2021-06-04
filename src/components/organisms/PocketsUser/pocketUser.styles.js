@@ -10,11 +10,17 @@ export const StyledDivPocketsUser = styled.div`
     width: 100%;
     border-radius: 8px;
     position: absolute;
-    bottom: -85%;
+    top: 100%;
+    padding-top: 25px;
 `
 
 export const StyledDivButtonShowPockets = styled.div`
     margin: 0 0 10px 0;
     position: absolute;
-    top: -14%;
+    top: -13%;
+    background: white;
+    border-radius: 8px;
+    &:hover {
+        background: lightgray;
+    }
 `

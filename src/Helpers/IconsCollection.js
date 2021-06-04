@@ -35,11 +35,6 @@ const IconsCollection = () => (
       <symbol id="icon-checkmark" viewBox="0 0 32 32">
         <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
       </symbol>
-      <symbol id="icon-menu2" viewBox="0 0 44 32">
-        <path d="M0 6h28v6h-28v-6zM0 14h28v6h-28v-6zM0 22h28v6h-28v-6z"></path>
-        <path d="M31 18l6 6 6-6z"></path>
-        <path d="M43 16l-6-6-6 6z"></path>
-      </symbol>
       <symbol id="icon-plus" viewBox="0 0 32 32">
         <path d="M31 12h-11v-11c0-0.552-0.448-1-1-1h-6c-0.552 0-1 0.448-1 1v11h-11c-0.552 0-1 0.448-1 1v6c0 0.552 0.448 1 1 1h11v11c0 0.552 0.448 1 1 1h6c0.552 0 1-0.448 1-1v-11h11c0.552 0 1-0.448 1-1v-6c0-0.552-0.448-1-1-1z"></path>
       </symbol>
