@@ -22,7 +22,7 @@ const textColor = (props) => {
 const StyledInput = styled.input`
   background: transparent;
   border: none;
-  padding: 5px 15px 5px 3px;
+  padding: 5px 0 5px 3px;
   color: ${(props) => textColor(props)};
   border-bottom: 1px solid lightgray;
   outline: none;

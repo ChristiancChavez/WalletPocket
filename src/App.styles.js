@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import background from './Helpers/Images/backgorund.png';
 
 export const StyledAppContainer = styled.div`
-    width: 400px;
-    height: 500px;
+    width: 450px;
+    height: 550px;
     padding: 0;
     border: 8px solid black;
     box-shadow: 0 0 15px 2px grey;
@@ -17,6 +17,6 @@ export const StyledAppContainer = styled.div`
     justify-content: flex-start;
     background-image: url(${background});
     background-repeat: no-repeat;
-    background-size: 500px 570px;
+    background-size: 500px 650px;
     padding-top: 40px;
 `
