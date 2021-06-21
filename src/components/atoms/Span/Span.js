@@ -1,12 +1,24 @@
 import React from "react";
 // Styles
-import StyledSpan from "./span.styles";
+import { StyledSpan, StyledAnchor } from "./span.styles";
 
-const Span = ({ children, fontSize, weight, color }) => {
+const Span = ({ children, fontSize, weight, color, title }) => {
   return (
-    <StyledSpan fontSize={fontSize} weight={weight} color={color}>
-      {children}
-    </StyledSpan>
+    <>
+      { title ? 
+        (
+        <StyledSpan fontSize={fontSize} weight={weight} color={color}>
+          {children}
+        </StyledSpan>
+        )
+        :
+        (
+          <StyledAnchor fontSize={fontSize} weight={weight} color={color}>
+          {children}
+        </StyledAnchor>
+        )
+      }
+    </>
   );
 };
 

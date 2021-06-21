@@ -58,10 +58,13 @@ const textWeight = (props) => {
   return spanWeight;
 };
 
-const StyledSpan = styled.span`
+export const StyledSpan = styled.span`
   font-size: ${(props) => textSize(props)};
   color: ${(props) => textColor(props)};
   font-weight: ${(props) => textWeight(props)};
-`;
-
-export default StyledSpan;
+`
+export const StyledAnchor = styled.a`
+  font-size: ${(props) => textSize(props)};
+  color: ${(props) => textColor(props)};
+  font-weight: ${(props) => textWeight(props)};
+`

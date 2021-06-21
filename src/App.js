@@ -8,7 +8,7 @@ function App() {
   return (
     <StyledAppContainer>
       <IconsCollection />
-      <Span fontSize="titleApp" weight="title" color="white">WALLET APP</Span>
+      <Span fontSize="titleApp" weight="title" color="white" title>WALLET APP</Span>
       <PocketCategories />
     </StyledAppContainer>
   );
