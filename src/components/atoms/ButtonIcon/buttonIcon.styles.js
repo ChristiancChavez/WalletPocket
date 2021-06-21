@@ -8,7 +8,7 @@ const StyledButonIcon = styled.button`
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
-  margin: 0;
+  margin: 0 5px;
   display: flex;
   align-items: center;
   flex-flow: row;

@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const StyledContainerPocket = styled.div`
     display: flex;
-    width: 85%;
-    flex-flow: row nowrap;
+    width: 80%;
+    flex-flow: column nowrap;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -11,6 +11,7 @@ export const StyledContainerPocket = styled.div`
     border-radius: 8px;
     margin: 15px auto;
     padding: 5px 10px;
+    background: white;
     :hover {
         transform: scale(1.1, 1.1);
     }

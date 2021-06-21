@@ -6,14 +6,14 @@ import ModalMessage from '../../molecules/ModalMessage/ModalMessage';
 //Styles 
 import { StyledContainerPocket, StyledContainerMessage } from './pocketList.styles';
 
-const PocketList = () => {
+const PocketList = ({ icon, name, percentage, money}) => {
     return (
         <StyledContainerPocket>
-            <PocketInfo icon="airplane" name="Travel to Cartagena" percentage={25} money={1000000} />
-            <PocketAddition />
+            <PocketInfo icon={icon} name={name} percentage={percentage} money={money} />
+            {/* <PocketAddition />
             <StyledContainerMessage>
                 <ModalMessage>¿Are you sure?, You'll remove this pocket</ModalMessage>
-            </StyledContainerMessage>
+            </StyledContainerMessage> */}
         </StyledContainerPocket>
     );
 };

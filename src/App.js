@@ -1,15 +1,15 @@
 import { StyledAppContainer } from './App.styles.js';
 import IconsCollection from './Helpers/IconsCollection';
-// Components 
-import PocketList from './components/organisms/PocketList/PocketList';
-import WalletBalance from './components/organisms/WalletBalance/WalletBalance';
+// Componentsguatame
+import PocketCategories from './components/templates/PocketCategories/PocketCategories';
+import Span from './components/atoms/Span/Span.js';
 
 function App() {
   return (
     <StyledAppContainer>
       <IconsCollection />
-      <h1>Wallet Pocket</h1>
-      <WalletBalance />
+      <Span fontSize="titleApp" weight="title" color="white" title>WALLET APP</Span>
+      <PocketCategories />
     </StyledAppContainer>
   );
 }

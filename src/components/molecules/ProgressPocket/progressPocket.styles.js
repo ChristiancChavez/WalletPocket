@@ -45,22 +45,59 @@ export const StyledCircleRail = styled.circle`
     fill: none;
 `
 export const StyledCategoryPocket = styled.div`
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     border-radius: 8px;
-    background: transparent;
-    border:  1px solid lightgray;
-    box-shadow: 0 0 15px 2px gray;
+    background: white;
+    border:  none;
+    box-shadow: 0 0 15px 2px black;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: flex-end;
     cursor: pointer;
+    position: relative;
+    margin: 20px 15px;
     &:hover {
         box-shadow: none;
     }
 `
 export const StyledSpan = styled.div`
 position: absolute;
-bottom: -27px;
+bottom: -30px;
+`
+
+export const StyledDivPocket = styled.div`
+    display: flex;  
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 20px;
+`
+export const StyledCreatePocket = styled.div`
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    background: lightgray;
+    border:  none;
+    cursor: none;
+    position: relative;
+    margin: 20px 15px;
+
+`
+
+export const StyledCategoryPocketInputs = styled.div`
+    display: flex; 
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px 0 0;
+`
+
+export const StyledCategoryPocketButtons = styled.div`
+    display: flex;
+    flex-flow: column nowrap;
 `
