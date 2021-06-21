@@ -96,3 +96,8 @@ export const StyledCategoryPocketInputs = styled.div`
     align-items: center;
     padding: 0 20px 0 0;
 `
+
+export const StyledCategoryPocketButtons = styled.div`
+    display: flex;
+    flex-flow: column nowrap;
+`

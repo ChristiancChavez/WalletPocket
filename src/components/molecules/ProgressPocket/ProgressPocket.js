@@ -3,6 +3,7 @@ import React from 'react';
 import Icon from '../../atoms/Icon/Icon';
 import Span from '../../atoms/Span/Span';
 import Input from './../../atoms/Input/Input'; 
+import ButtonIcon from './../../atoms/ButtonIcon/ButtonIcon';  
 // Styles
 import { 
     StyledDivBar, 
@@ -14,7 +15,8 @@ import {
     StyledSpan, 
     StyledDivPocket ,
     StyledCategoryPocketInputs,
-    StyledCreatePocket
+    StyledCreatePocket,
+    StyledCategoryPocketButtons
 } from './progressPocket.styles'
 const PocketProgress = ({ progress, percentage, icon, category, createPocket }) => {
     
@@ -51,6 +53,10 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
                         <Input placeholder="Pocket's name" />
                         <Input placeholder="Money goal" />
                     </StyledCategoryPocketInputs>
+                    <StyledCategoryPocketButtons>
+                        <ButtonIcon name="checkmark" color="green" size="15"/>
+                        <ButtonIcon name="cross" color="red" size="15"/>
+                    </StyledCategoryPocketButtons>
                 </StyledDivPocket>
             )
             :
