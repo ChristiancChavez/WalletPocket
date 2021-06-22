@@ -4,7 +4,7 @@ import Icon from "./Icon";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Icon",
+  title: "atoms/Icon",
   component: Icon,
 };
 

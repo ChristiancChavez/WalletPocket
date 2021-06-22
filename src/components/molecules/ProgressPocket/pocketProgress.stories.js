@@ -5,7 +5,7 @@ import PocketProgress from './ProgressPocket';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default  {
-    title: 'Pocket Progress',
+    title: 'molecules/Pocket Progress',
     component: PocketProgress
 }
 

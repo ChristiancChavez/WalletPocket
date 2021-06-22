@@ -4,7 +4,7 @@ import ButtonIcon from "./ButtonIcon";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Button Icon",
+  title: "atoms/Button Icon",
   component: ButtonIcon,
 };
 
