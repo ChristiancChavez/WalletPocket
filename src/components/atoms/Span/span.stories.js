@@ -4,7 +4,7 @@ import Span from "./Span";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "span text",
+  title: "atoms/span text",
   component: Span,
 };
 
@@ -31,3 +31,4 @@ export const message = () => (
   </Span>
 );
 export const pocketTitle = () => <Span>Partys</Span>;
+export const appTitle = () => <Span title fontSize="titleApp">Wallet Pocket</Span>;

@@ -4,7 +4,7 @@ import PocketAddition from './PocketAddition';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-    title: 'PocketAddition',
+    title: 'molecules/PocketAddition',
     component: PocketAddition
 }
 

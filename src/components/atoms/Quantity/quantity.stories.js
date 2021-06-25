@@ -4,7 +4,7 @@ import Quantity from "./Quantity";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Quantity",
+  title: "atoms/Quantity",
   component: Quantity,
 };
 

@@ -4,7 +4,7 @@ import Input from "./Input";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Input",
+  title: "atoms/Input",
   component: Input,
 };
 
