@@ -10,5 +10,5 @@ export default {
 
 export const userIcon = () => <Icon name="profile" />;
 export const walletIcon = () => <Icon name="wallet" />;
-export const showPocketList = () => <Icon name="menu2" />;
+export const showPocketList = () => <Icon name="menu" />;
 export const pocketIcon = () => <Icon name="glass2" />;
