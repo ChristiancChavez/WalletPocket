@@ -11,11 +11,17 @@ export default {
     decorators: [
         (Story) => (
         <div style={{ background: `url(${background})`,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        width: '100vw',
-        height: '100vh',
-        margin: '0' }}>
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            width: '100vw',
+            height: '100vh',
+            margin: '0',
+            padding: '20px', 
+            display: 'flex',
+            flexFlow: 'column',
+            alignContent: 'center',
+            justifyContent: 'center'
+        }}>
             <Story />
         </div>
         ),

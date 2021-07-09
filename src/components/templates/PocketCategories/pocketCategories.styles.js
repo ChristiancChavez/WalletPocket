@@ -14,4 +14,5 @@ export const StyledDivPockets = styled.div`
     justify-content: space-around;
     align-items: center;
     margin: 20px;
+    width: 400px;
 `

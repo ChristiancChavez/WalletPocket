@@ -14,7 +14,8 @@ export default {
         backgroundRepeat: 'no-repeat',
         width: '100vw',
         height: '100vh',
-        margin: '0' }}>
+        margin: '0',
+        padding: '20px' }}>
             <Story />
         </div>
         ),
