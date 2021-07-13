@@ -17,7 +17,8 @@ export const StyledDivPocketsUser = styled.div`
 export const StyledDivButtonShowPockets = styled.div`
     margin: 0 0 10px 0;
     position: absolute;
-    top: -13%;
+    top: -10%;
+    left: 16%;
     background: white;
     border-radius: 8px;
     &:hover {

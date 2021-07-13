@@ -2,7 +2,7 @@ import React from 'react';
 import Span from '../../atoms/Span/Span';
 import ProgressPocket from '../../molecules/ProgressPocket/ProgressPocket';
 //Styles
-import { StyledDivPocketContainer, StyledDivPockets } from './pocketCategories.styles';
+import { StyledDivPocketContainer, StyledDivPockets, StyledDivCreatePocket } from './pocketCategories.styles';
 
 const PocketCategories = () => {
     return (
@@ -16,7 +16,9 @@ const PocketCategories = () => {
                 <ProgressPocket icon="glass2" category="Entertainment" />
                 <ProgressPocket icon="cog" category="Others" />
             </StyledDivPockets>
-            <ProgressPocket createPocket icon="cog" />
+            <StyledDivCreatePocket>
+                <ProgressPocket createPocket icon="home" />
+            </StyledDivCreatePocket>
         </StyledDivPocketContainer>
     );
 };

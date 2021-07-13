@@ -13,6 +13,5 @@ export const StyledAccess = styled.div`
     width: 45px;
     position: absolute;
     bottom: 10%;
-
-;
+    left: 45%;
 `

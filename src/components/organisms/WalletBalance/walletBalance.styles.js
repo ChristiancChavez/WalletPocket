@@ -6,6 +6,7 @@ export const StyledBalance = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-bottom: 15px;
 `
 export const StyledContainerBalance = styled.div`
     position: absolute;

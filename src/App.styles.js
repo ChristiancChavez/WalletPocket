@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import background from './Helpers/Images/backgorund.png';
 
 export const StyledAppContainer = styled.div`
-    width: 450px;
-    height: 550px;
-    padding: 0;
+    width: 650px;
+    height: 400px;
+    padding: 50px 0;
     border: 8px solid black;
     box-shadow: 0 0 15px 2px grey;
     border-radius: 12px;
@@ -14,9 +14,9 @@ export const StyledAppContainer = styled.div`
     overflow: hidden;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     background-image: url(${background});
     background-repeat: no-repeat;
-    background-size: 500px 650px;
-    padding-top: 40px;
+    background-size: 650px 650px;
 `

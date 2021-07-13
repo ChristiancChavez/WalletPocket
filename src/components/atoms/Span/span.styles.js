@@ -51,7 +51,6 @@ const textWeight = (props) => {
     case "title":
       spanWeight = 800;
       break;
-
     default:
       spanWeight = 600;
   }

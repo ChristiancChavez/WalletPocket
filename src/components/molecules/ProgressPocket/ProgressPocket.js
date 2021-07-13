@@ -16,7 +16,8 @@ import {
     StyledDivPocket ,
     StyledCategoryPocketInputs,
     StyledCreatePocket,
-    StyledCategoryPocketButtons
+    StyledCategoryPocketButtons,
+    StyledDivContainerCreate
 } from './progressPocket.styles'
 const PocketProgress = ({ progress, percentage, icon, category, createPocket }) => {
     
@@ -45,19 +46,22 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
     return (
         <>
             {createPocket ?
-            (   <StyledDivPocket>
-                    <StyledCreatePocket>
-                        <Icon name={icon} position />
-                    </StyledCreatePocket>
-                    <StyledCategoryPocketInputs>
-                        <Input placeholder="Pocket's name" />
-                        <Input placeholder="Money goal" />
-                    </StyledCategoryPocketInputs>
-                    <StyledCategoryPocketButtons>
-                        <ButtonIcon name="checkmark" color="green" size="15"/>
-                        <ButtonIcon name="cross" color="red" size="15"/>
-                    </StyledCategoryPocketButtons>
-                </StyledDivPocket>
+            (   <StyledDivContainerCreate>
+                    <Span fontSize="title" weight="category">Category {icon}</Span>
+                    <StyledDivPocket>
+                        <StyledCreatePocket>
+                            <Icon name={icon} position />
+                        </StyledCreatePocket>
+                        <StyledCategoryPocketInputs>
+                            <Input placeholder="Pocket's name" />
+                            <Input placeholder="Money goal" />
+                        </StyledCategoryPocketInputs>
+                        <StyledCategoryPocketButtons>
+                            <ButtonIcon name="checkmark" color="green" size="15"/>
+                            <ButtonIcon name="cross" color="red" size="15"/>
+                        </StyledCategoryPocketButtons>
+                    </StyledDivPocket>
+                </StyledDivContainerCreate>
             )
             :
             (   <StyledDivBar>

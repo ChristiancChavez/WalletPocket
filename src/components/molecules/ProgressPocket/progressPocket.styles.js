@@ -72,10 +72,7 @@ export const StyledDivPocket = styled.div`
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
-    background: white;
-    border-radius: 6px;
-    padding: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
 `
 export const StyledCreatePocket = styled.div`
     width: 65px;
@@ -87,6 +84,19 @@ export const StyledCreatePocket = styled.div`
     position: relative;
     margin: 20px 15px;
 
+`
+export const StyledDivContainerCreate = styled.div`
+    display: flex;  
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-shadow: 0 0 15px 2px black;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 20px;
+    height: 250px;
 `
 
 export const StyledCategoryPocketInputs = styled.div`

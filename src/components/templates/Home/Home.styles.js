@@ -6,5 +6,5 @@ export const StyledDivHome = styled.div`
     flex-flow: column wrap;
     display: relative;
     align-content: center;
-    margin-top: 30%;
+    margin-top: 30px;
 `
