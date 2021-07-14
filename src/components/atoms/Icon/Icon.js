@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 import { StyledSvg, StyledDiv } from "./icon.styles";
 import IconsCollection from "../../../Helpers/IconsCollection";
 
-const Icon = ({ name, position, size, color, marginTop, onClick = () => {} }) => (
-  <StyledDiv marginTop={marginTop}>
+const Icon = ({ name, position, size, color, marginTop, disabled, onClick = () => {} }) => (
+  <StyledDiv marginTop={marginTop} disabled={disabled}>
     <StyledSvg onClick={onClick} position={position} size={size} color={color} >
       <IconsCollection />
       <use xlinkHref={`#icon-${name}`} />
