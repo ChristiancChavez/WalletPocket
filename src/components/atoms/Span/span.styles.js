@@ -8,7 +8,7 @@ const textSize = (props) => {
   let spanText;
   switch (props.fontSize) {
     case "user":
-      spanText = "18px";
+      spanText = "17px";
       break;
     case "category":
       spanText = "18px";

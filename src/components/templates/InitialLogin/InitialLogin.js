@@ -10,7 +10,7 @@ import { StyledDivInitialLogin } from './Initiallogin.styles';
 
 const InitialLogin = () => {
 
-    const { userNameWallet, setUserNameWallet, initialAmount, setInitialAmount, setShowHome } = useContext(PocketContext);
+    const { userNameWallet, setUserNameWallet, initialAmount, setInitialAmount, setShowHome, setShowLoginValidation } = useContext(PocketContext);
 
     const updateWalletInfo = (e) => {
         e.preventDefault();
@@ -19,7 +19,10 @@ const InitialLogin = () => {
             setUserNameWallet('');
             setInitialAmount('');
         } else {
-            console.log('typea los datos');
+            setShowLoginValidation(true);
+            setTimeout(() => {
+                setShowLoginValidation(false);
+            },3000)
         }
     };
 
