@@ -4,10 +4,10 @@ import ButtonIcon from '../../atoms/ButtonIcon/ButtonIcon';
 //Styles
 import { StyledAccess } from './AccessHome.styles';
 
-const AccessHome = () => {
+const AccessHome = ({ onClick }) => {
     return (
         <StyledAccess>
-            <ButtonIcon name="user-plus" color="black" size="25" /> 
+            <ButtonIcon onClick={onClick} name="user-plus" color="black" size="25" /> 
         </StyledAccess>
     );
 };

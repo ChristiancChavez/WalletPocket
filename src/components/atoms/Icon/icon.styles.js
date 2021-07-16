@@ -9,10 +9,6 @@ const marginTop = (props) => {
     if(!props.marginTop) return 0;
     return `${props.marginTop}px`
 };
-const disabledStyleDiv = (props) => {
-    if(!props.disabled) return 'flex'
-    return 'none'
-};
 
 const iconColor = (props) => {
     if(!props.color) return 'black';
@@ -20,7 +16,7 @@ const iconColor = (props) => {
 };
 
 export const StyledDiv = styled.div`
-    display: ${(props) => disabledStyleDiv(props)};
+    display: flex;
     margin-top: ${(props) => marginTop(props)};
     justify-content: center;
     flex-flow: row;
