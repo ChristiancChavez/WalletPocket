@@ -4,7 +4,7 @@ export const PocketContext = createContext();
 
 const PocketContextProvider = (props) => {
 
-    const [initialAmount, setInitialAmount] = useState(JSON.parse(window.localStorage.getItem('initialAmount')) || '');
+    const [initialAmount, setInitialAmount] = useState(JSON.parse(window.localStorage.getItem('initialAmount')) || 0);
     const [userNameWallet, setUserNameWallet] = useState(JSON.parse(window.localStorage.getItem('userNameWallet')) || '');
     const [showHome, setShowHome] = useState(false);
     const [showLoginValidation, setShowLoginValidation] = useState(false);
