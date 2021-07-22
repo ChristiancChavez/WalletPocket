@@ -13,7 +13,14 @@ export const StyledDivInitialLogin = styled.div`
     border: none;
     box-shadow: 0 0 15px 2px grey;
     margin-top: 20px;
-
+    > button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: whitesmoke;
+        border-radius: 4px;
+        box-shadow: 0 0 15px 2px grey;
+    }
 `
 export const StyledLoginRules = styled.div`
     background: white;
@@ -23,7 +30,7 @@ export const StyledLoginRules = styled.div`
     box-shadow: 0 0 15px 2px grey;
     border-radius: 8px;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
