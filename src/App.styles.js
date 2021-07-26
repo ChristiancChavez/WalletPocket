@@ -3,7 +3,7 @@ import background from './Helpers/Images/backgorund.png';
 
 export const StyledAppContainer = styled.div`
     width: 650px;
-    height: 400px;
+    height: 500px;
     padding: 50px 0;
     border: 8px solid black;
     box-shadow: 0 0 15px 2px grey;

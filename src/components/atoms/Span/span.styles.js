@@ -8,7 +8,7 @@ const textSize = (props) => {
   let spanText;
   switch (props.fontSize) {
     case "user":
-      spanText = "18px";
+      spanText = "17px";
       break;
     case "category":
       spanText = "18px";
@@ -30,6 +30,13 @@ const textSize = (props) => {
   }
   return spanText;
 };
+
+const textMargin = (props) => {
+  if (!props.margin) {
+    return "0";
+  }
+  return `${props.margin}px`;
+}
 
 const textColor = (props) => {
   if (!props.color) {
@@ -61,9 +68,11 @@ export const StyledSpan = styled.span`
   font-size: ${(props) => textSize(props)};
   color: ${(props) => textColor(props)};
   font-weight: ${(props) => textWeight(props)};
+  margin-top: ${(props) => textMargin(props)}
 `
 export const StyledAnchor = styled.a`
   font-size: ${(props) => textSize(props)};
   color: ${(props) => textColor(props)};
   font-weight: ${(props) => textWeight(props)};
+  margin-bottom: ${(props) => textMargin(props)};
 `

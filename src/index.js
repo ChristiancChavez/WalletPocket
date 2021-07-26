@@ -3,10 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+// Context
+import PocketContextProvider from './context/PocketContext.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <PocketContextProvider>
+      <App />
+    </PocketContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
