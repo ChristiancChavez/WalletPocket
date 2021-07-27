@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const AccessPocket = () => {
     return (
         <StyledDivAccessPocket>
-            <Span fontSize="title" weight="title">Pocket</Span>
+            <Span fontSize="title" weight="title">Create Pocket</Span>
             <Link to="/create" >
                 <ButtonIcon color="black" name="plus" size="19" />
             </Link>

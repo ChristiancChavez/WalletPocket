@@ -20,3 +20,11 @@ export const StyledAppContainer = styled.div`
     background-repeat: no-repeat;
     background-size: 650px 650px;
 `
+
+export const StyledDivTitle = styled.div`
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 100%;
+`

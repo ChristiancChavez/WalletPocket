@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { StyledAppContainer } from './App.styles.js';
+import { StyledAppContainer, StyledDivTitle } from './App.styles.js';
 import IconsCollection from './Helpers/IconsCollection';
 // Components
 import Span from './components/atoms/Span/Span.js';
@@ -22,7 +22,9 @@ function App() {
     <Router>
       <StyledAppContainer>
         <IconsCollection />
-        <Span fontSize="titleApp" weight="title" color="white" title>WALLET POCKET</Span>
+        <StyledDivTitle>
+          <Span fontSize="titleApp" weight="title" color="white" title>WALLET POCKET</Span>
+        </StyledDivTitle>
         <Switch>
           <Route exact path="/home">
             <Home />

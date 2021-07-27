@@ -13,13 +13,13 @@ import {
     StyledCategoryPocket, 
     StyledContainerSvg, 
     StyledSpan, 
-    StyledDivPocket ,
+    StyledDivPocket,
     StyledCategoryPocketInputs,
     StyledCreatePocket,
     StyledCategoryPocketButtons,
     StyledDivContainerCreate
 } from './progressPocket.styles'
-const PocketProgress = ({ progress, percentage, icon, category, createPocket }) => {
+const PocketProgress = ({ progress, percentage, icon, category, createPocket, onClick }) => {
     
     const showProgressVariation = (progress) => {
         return progress ? 
@@ -35,7 +35,7 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
         :
         (   
             <StyledCategoryPocket>
-                <Icon name={icon} position />
+                <Icon onClick={onClick} name={icon} position />
                 <StyledSpan>
                     <Span children={category} fontSize="category"/>
                 </StyledSpan>
