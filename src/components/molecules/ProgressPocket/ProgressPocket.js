@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext} from 'react';
 // components
 import Icon from '../../atoms/Icon/Icon';
 import Span from '../../atoms/Span/Span';
 import Input from './../../atoms/Input/Input'; 
 import ButtonIcon from './../../atoms/ButtonIcon/ButtonIcon';  
+// Context
+import { PocketContext } from '../../../context/PocketContext';
 // Styles
 import { 
     StyledDivBar, 
@@ -21,6 +23,12 @@ import {
 } from './progressPocket.styles'
 const PocketProgress = ({ progress, percentage, icon, category, createPocket, onClick }) => {
     
+    const { setPocketList } = useContext(PocketContext);
+
+    const addPocketToList = () => {
+        setPocketList([...{ icon:"airplane", name:"Travel to Cartagena", percentage:25, money:1000000 }
+        ])
+    }
     const showProgressVariation = (progress) => {
         return progress ? 
         (   
@@ -57,8 +65,8 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket, on
                             <Input placeholder="Money goal" />
                         </StyledCategoryPocketInputs>
                         <StyledCategoryPocketButtons>
-                            <ButtonIcon name="checkmark" color="green" size="15"/>
-                            <ButtonIcon name="cross" color="red" size="15"/>
+                            <ButtonIcon onClick={() => addPocketToList} name="checkmark" color="green" size="15"/>
+                            <ButtonIcon onClick={() => console.log('close')} name="cross" color="red" size="15"/>
                         </StyledCategoryPocketButtons>
                     </StyledDivPocket>
                 </StyledDivContainerCreate>

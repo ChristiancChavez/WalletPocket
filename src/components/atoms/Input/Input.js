@@ -7,7 +7,6 @@ import StyledInput from "./input.styles";
 const Input = ({ placeholder, rest, variantStyle, type, onChange}) => {
 
   const handleInput = (e) => {
-    console.log(e.target.value);
     onChange(e);
   }
 

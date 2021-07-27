@@ -12,7 +12,6 @@ const PocketCategories = () => {
 
     const showCreatePocket = () => {
         setShowPanelPocket(true);
-        console.log('jadfjabfakjdfbajkfbd');
     }
     const pocketCategoriesRender = (categoriesPockets) => {
         return categoriesPockets.map(categoriePockets => {
