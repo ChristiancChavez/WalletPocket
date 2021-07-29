@@ -55,7 +55,6 @@ export const StyledCategoryPocket = styled.div`
     flex-flow: column nowrap;
     align-items: center;
     justify-content: flex-end;
-    cursor: pointer;
     position: relative;
     margin: 20px 15px;
     &:hover {

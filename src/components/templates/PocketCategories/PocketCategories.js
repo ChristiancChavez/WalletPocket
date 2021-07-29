@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import Span from '../../atoms/Span/Span';
 import ProgressPocket from '../../molecules/ProgressPocket/ProgressPocket';
 //pocket Categories
 import { categoriesPockets } from '../../../utils/categoriesPockets';
+//Context
+import { PocketContext } from '../../../context/PocketContext';
 //Styles
 import { StyledDivPocketContainer, StyledDivPockets, StyledDivCreatePocket } from './pocketCategories.styles';
 
 const PocketCategories = () => {
 
-    const [showPanelPocket, setShowPanelPocket] = useState(false);
+    const { nameIconCategory, showPanelPocket } = useContext(PocketContext);
 
-    const showCreatePocket = () => {
-        setShowPanelPocket(true);
-    }
     const pocketCategoriesRender = (categoriesPockets) => {
         return categoriesPockets.map(categoriePockets => {
-            return <ProgressPocket onClick={() => showCreatePocket()} icon={categoriePockets.icon} category={categoriePockets.category} key={categoriePockets.category} />
+            return <ProgressPocket icon={categoriePockets.icon} category={categoriePockets.category} key={categoriePockets.category} />
         })
     }
 
@@ -26,7 +25,7 @@ const PocketCategories = () => {
                 {pocketCategoriesRender(categoriesPockets)}
             </StyledDivPockets>
             {showPanelPocket && <StyledDivCreatePocket>
-                <ProgressPocket createPocket icon="home" />
+                <ProgressPocket createPocket icon={nameIconCategory} category={nameIconCategory} />
             </StyledDivCreatePocket>}
         </StyledDivPocketContainer>
     );

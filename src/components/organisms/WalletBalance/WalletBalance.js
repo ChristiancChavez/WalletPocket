@@ -11,16 +11,29 @@ import { PocketContext } from '../../../context/PocketContext';
 
 const WalletBalance = () => {
 
-    const { initialAmount } = useContext(PocketContext);
+    const { initialAmount, setInitialAmount } = useContext(PocketContext);
     const [showRecharge, setUseRecharge] = useState(false);
+    const [walletRecharge, setWalletRecharge] = useState(0);
+    const initialAmountInteger = parseInt(initialAmount);
+
+    const handleWalletRecharge = (e) => {
+        setWalletRecharge(e.target.value);
+    }
+
+    const newInitialAmount = () => {
+        const walletRechargeInteger = parseInt(walletRecharge);
+        const newValueInitialAmount = initialAmountInteger + walletRechargeInteger;
+        setInitialAmount(newValueInitialAmount);
+        console.log(newValueInitialAmount);
+    }
 
     return (
         <StyledBalance>
             <Icon name="wallet" color="gray" size="25" marginTop="7" />
             <Quantity weight="800" fontSize="40" >{initialAmount}</Quantity>
-            <ButtonIcon onClick={() => setUseRecharge(!showRecharge)} name="coin-dollar" size="25" />
+            <ButtonIcon onClick={() => setUseRecharge(true)} name="coin-dollar" size="25" />
             {showRecharge && <StyledContainerBalance>
-                <ModalMessage quantity />
+                <ModalMessage quantity onClick={newInitialAmount} onChange={(e) => handleWalletRecharge(e) } />
             </StyledContainerBalance>}
         </StyledBalance>
     );

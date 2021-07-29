@@ -21,9 +21,34 @@ import {
     StyledCategoryPocketButtons,
     StyledDivContainerCreate
 } from './progressPocket.styles'
-const PocketProgress = ({ progress, percentage, icon, category, createPocket, onClick }) => {
+const PocketProgress = ({ progress, percentage, icon, category, createPocket }) => {
     
-    const { setPocketList } = useContext(PocketContext);
+    const { setPocketList, setShowPanelPocket, setNameIconCategory, nameIconCategory, setIconCategory, iconCategory } = useContext(PocketContext);
+
+    const showCreatePocket = (category) => {
+        switch(category){
+            case 'food':
+                setIconCategory('spoon-knife');
+            break
+            case 'Health':
+                setIconCategory('medical_services');
+            break
+            case 'Travel':
+                setIconCategory('airplane');
+            break
+            case 'Home':
+                setIconCategory('home');
+            break
+            case 'Entertainment':
+                setIconCategory('glass2');
+            break
+            default:
+                setIconCategory('cog');
+            break
+        }
+        setShowPanelPocket(true);
+        setNameIconCategory(category);
+    }
 
     const addPocketToList = () => {
         setPocketList([...{ icon:"airplane", name:"Travel to Cartagena", percentage:25, money:1000000 }
@@ -42,8 +67,8 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket, on
         )
         :
         (   
-            <StyledCategoryPocket>
-                <Icon onClick={onClick} name={icon} position />
+            <StyledCategoryPocket >
+                <Icon onClick={(e) => showCreatePocket(category)} name={icon} position />
                 <StyledSpan>
                     <Span children={category} fontSize="category"/>
                 </StyledSpan>
@@ -55,10 +80,10 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket, on
         <>
             {createPocket ?
             (   <StyledDivContainerCreate>
-                    <Span fontSize="title" weight="category">Category {icon}</Span>
+                    <Span fontSize="title" weight="category">Category {nameIconCategory}</Span>
                     <StyledDivPocket>
                         <StyledCreatePocket>
-                            <Icon name={icon} position />
+                            <Icon name={iconCategory} position createPocket />
                         </StyledCreatePocket>
                         <StyledCategoryPocketInputs>
                             <Input placeholder="Pocket's name" />

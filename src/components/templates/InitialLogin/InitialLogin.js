@@ -36,7 +36,7 @@ const InitialLogin = () => {
             return <>
                 <Span weight="category" key={loginRule.id}>{loginRule.variable}</Span>
                 <StyledUlRules>
-                    {loginRule.rules.map(rule => <li key={rule}>{rule}</li>)}
+                    {loginRule.rules.map(rule => <li key={`${rule} ${loginRule.rules[rule]}`}>{rule}</li>)}
                 </StyledUlRules>
                 </>
         }) 

@@ -21,6 +21,7 @@ export const StyledDiv = styled.div`
     justify-content: center;
     flex-flow: row;
     align-items: center;
+    cursor: pointer;
 `
 
 export const StyledSvg = styled.svg`

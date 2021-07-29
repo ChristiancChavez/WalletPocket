@@ -9,6 +9,9 @@ const PocketContextProvider = (props) => {
     const [pocketList, setPocketList] = useState(JSON.parse(window.localStorage.getItem('pocketList')) || [])
     const [showHome, setShowHome] = useState(false);
     const [showLoginValidation, setShowLoginValidation] = useState(false);
+    const [nameIconCategory, setNameIconCategory] = useState('');
+    const [iconCategory, setIconCategory] = useState('');
+    const [showPanelPocket, setShowPanelPocket] = useState(false);
     useEffect(() => {
         window.localStorage.setItem('initialAmount', JSON.stringify(initialAmount));
     },[initialAmount]);
@@ -32,7 +35,13 @@ const PocketContextProvider = (props) => {
                 setShowHome, 
                 showLoginValidation, 
                 setShowLoginValidation, 
-                setPocketList 
+                setPocketList,
+                nameIconCategory, 
+                setNameIconCategory,
+                showPanelPocket, 
+                setShowPanelPocket,
+                iconCategory, 
+                setIconCategory
             }}>
             {props.children}
         </PocketContext.Provider>

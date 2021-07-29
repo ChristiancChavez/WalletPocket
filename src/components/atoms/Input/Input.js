@@ -6,15 +6,11 @@ import StyledInput from "./input.styles";
 
 const Input = ({ placeholder, rest, variantStyle, type, onChange}) => {
 
-  const handleInput = (e) => {
-    onChange(e);
-  }
-
   return (
     <StyledInput
       variantStyle={variantStyle}
       placeholder={placeholder}
-      onChange={handleInput}
+      onChange={onChange}
       type={type}
       {...rest}
     />
