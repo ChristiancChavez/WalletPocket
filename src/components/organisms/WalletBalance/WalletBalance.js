@@ -11,8 +11,7 @@ import { PocketContext } from '../../../context/PocketContext';
 
 const WalletBalance = () => {
 
-    const { initialAmount, setInitialAmount } = useContext(PocketContext);
-    const [showRecharge, setUseRecharge] = useState(false);
+    const { initialAmount, setInitialAmount, showRecharge, setUseRecharge } = useContext(PocketContext);
     const [walletRecharge, setWalletRecharge] = useState(0);
     const initialAmountInteger = parseInt(initialAmount);
 
@@ -24,7 +23,7 @@ const WalletBalance = () => {
         const walletRechargeInteger = parseInt(walletRecharge);
         const newValueInitialAmount = initialAmountInteger + walletRechargeInteger;
         setInitialAmount(newValueInitialAmount);
-        console.log(newValueInitialAmount);
+        setWalletRecharge();
     }
 
     return (

@@ -12,6 +12,8 @@ const PocketContextProvider = (props) => {
     const [nameIconCategory, setNameIconCategory] = useState('');
     const [iconCategory, setIconCategory] = useState('');
     const [showPanelPocket, setShowPanelPocket] = useState(false);
+    const [showRecharge, setUseRecharge] = useState(false);
+    const [walletRecharge, setWalletRecharge] = useState();
     useEffect(() => {
         window.localStorage.setItem('initialAmount', JSON.stringify(initialAmount));
     },[initialAmount]);
@@ -41,7 +43,11 @@ const PocketContextProvider = (props) => {
                 showPanelPocket, 
                 setShowPanelPocket,
                 iconCategory, 
-                setIconCategory
+                setIconCategory,
+                showRecharge, 
+                setUseRecharge,
+                walletRecharge, 
+                setWalletRecharge
             }}>
             {props.children}
         </PocketContext.Provider>
