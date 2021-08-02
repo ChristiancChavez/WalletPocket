@@ -47,7 +47,8 @@ const PocketContextProvider = (props) => {
                 showRecharge, 
                 setUseRecharge,
                 walletRecharge, 
-                setWalletRecharge
+                setWalletRecharge,
+                pocketList
             }}>
             {props.children}
         </PocketContext.Provider>

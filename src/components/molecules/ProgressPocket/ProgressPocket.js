@@ -1,4 +1,4 @@
-import React, { useContext} from 'react';
+import React, { useContext, useState } from 'react';
 // components
 import Icon from '../../atoms/Icon/Icon';
 import Span from '../../atoms/Span/Span';
@@ -23,7 +23,18 @@ import {
 } from './progressPocket.styles'
 const PocketProgress = ({ progress, percentage, icon, category, createPocket }) => {
     
-    const { setPocketList, setShowPanelPocket, setNameIconCategory, nameIconCategory, setIconCategory, iconCategory } = useContext(PocketContext);
+    const [namePocket, setNamePocket] = useState('');
+    const [amountPocket, setAmountPocket] = useState('');
+    
+    const { setPocketList, setShowPanelPocket, setNameIconCategory, nameIconCategory, setIconCategory, iconCategory, pocketList } = useContext(PocketContext);
+
+    const updateNamePocket = (e) => {
+        setNamePocket(e.target.value);
+    };
+
+    const updateAmountPocket = (e) => {
+        setAmountPocket(e.target.value);
+    };
 
     const showCreatePocket = (category) => {
         switch(category){
@@ -51,8 +62,10 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
     }
 
     const addPocketToList = () => {
-        setPocketList([...{ icon:"airplane", name:"Travel to Cartagena", percentage:25, money:1000000 }
-        ])
+        setPocketList([...pocketList, { icon:{iconCategory}, name:{namePocket}, percentage:0, money:{amountPocket} }]);
+        setNamePocket('');
+        setAmountPocket('');
+        console.log(pocketList, 'previus');
     }
     const showProgressVariation = (progress) => {
         return progress ? 
@@ -66,7 +79,7 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
             </StyledContainerSvg>
         )
         :
-        (   
+        (      
             <StyledCategoryPocket >
                 <Icon onClick={(e) => showCreatePocket(category)} name={icon} position />
                 <StyledSpan>
@@ -86,12 +99,12 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
                             <Icon name={iconCategory} position createPocket />
                         </StyledCreatePocket>
                         <StyledCategoryPocketInputs>
-                            <Input placeholder="Pocket's name" />
-                            <Input placeholder="Money goal" />
+                        <Input variantStyle="pocket" value={amountPocket} onChange={(e) => updateAmountPocket(e)} placeholder="Money goal" />
+                        <Input variantStyle="pocket" value={namePocket} onChange={(e) => updateNamePocket(e)} placeholder="Pocket's name" />
                         </StyledCategoryPocketInputs>
                         <StyledCategoryPocketButtons>
-                            <ButtonIcon onClick={() => addPocketToList} name="checkmark" color="green" size="15"/>
-                            <ButtonIcon onClick={() => console.log('close')} name="cross" color="red" size="15"/>
+                            <ButtonIcon onClick={() => addPocketToList()} name="checkmark" color="green" size="15"/>
+                            <ButtonIcon onClick={() => setShowPanelPocket(false)} name="cross" color="red" size="15"/>
                         </StyledCategoryPocketButtons>
                     </StyledDivPocket>
                 </StyledDivContainerCreate>

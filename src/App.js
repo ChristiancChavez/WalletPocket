@@ -13,6 +13,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Link
 } from "react-router-dom";
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
       <StyledAppContainer>
         <IconsCollection />
         <StyledDivTitle>
-          <Span fontSize="titleApp" weight="title" color="white" title>WALLET POCKET</Span>
+          <Link to="/home">
+            <Span fontSize="titleApp" weight="title" color="white" title>WALLET POCKET</Span>
+          </Link>
         </StyledDivTitle>
         <Switch>
           <Route exact path="/home">
