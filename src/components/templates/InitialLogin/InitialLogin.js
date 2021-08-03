@@ -13,15 +13,13 @@ import { StyledDivInitialLogin, StyledLoginRules, StyledUlRules } from './Initia
 
 const InitialLogin = () => {
 
-    const { userNameWallet, setUserNameWallet, initialAmount, setInitialAmount, setShowHome, setShowLoginValidation } = useContext(PocketContext);
+    const { userNameWallet, initialAmount, setShowHome, setShowLoginValidation } = useContext(PocketContext);
     const [showRules, setShowRules] = useState(true);
 
     const updateWalletInfo = (e) => {
         e.preventDefault();
         if(userNameWallet.trim() !== '' && initialAmount.trim() !== '' && initialAmount.length > 3 && userNameWallet.length < 15 && userNameWallet.length > 8 ) {
             setShowHome(true);
-            setUserNameWallet('');
-            setInitialAmount('');
         } else {
             setShowLoginValidation(true);
             setTimeout(() => {
@@ -38,7 +36,7 @@ const InitialLogin = () => {
             return <>
                 <Span weight="category" key={loginRule.id}>{loginRule.variable}</Span>
                 <StyledUlRules>
-                    {loginRule.rules.map(rule => <li key={rule}>{rule}</li>)}
+                    {loginRule.rules.map(rule => <li key={`${rule} ${loginRule.rules[rule]}`}>{rule}</li>)}
                 </StyledUlRules>
                 </>
         }) 
@@ -54,7 +52,7 @@ const InitialLogin = () => {
                 </StyledLoginRules>
             }   
             <Login />
-            <AccessHome onClick={updateWalletInfo} /> 
+            <AccessHome onClick={(e) => updateWalletInfo(e)} /> 
         </StyledDivInitialLogin>
     );
 };

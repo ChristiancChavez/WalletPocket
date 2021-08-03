@@ -15,7 +15,7 @@ export const StyledDivInitialLogin = styled.div`
     margin-top: 20px;
     > button {
         position: absolute;
-        top: 10px;
+        top: 200px;
         right: 10px;
         background: whitesmoke;
         border-radius: 4px;

@@ -4,19 +4,15 @@ import { func, string } from "prop-types";
 // Styled Component
 import StyledInput from "./input.styles";
 
-const Input = ({ placeholder, rest, variantStyle, type, onChange}) => {
-
-  const handleInput = (e) => {
-    console.log(e.target.value);
-    onChange(e);
-  }
+const Input = ({ placeholder, rest, variantStyle, type, onChange, value}) => {
 
   return (
     <StyledInput
       variantStyle={variantStyle}
       placeholder={placeholder}
-      onChange={handleInput}
+      onChange={onChange}
       type={type}
+      value={value}
       {...rest}
     />
   );

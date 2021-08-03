@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 // Components
 import Icon from '../../atoms/Icon/Icon';
 import ButtonIcon from '../../atoms/ButtonIcon/ButtonIcon';
@@ -6,16 +6,34 @@ import Quantity from '../../atoms/Quantity/Quantity';
 import ModalMessage from '../../molecules/ModalMessage/ModalMessage';
 // Styles 
 import { StyledBalance, StyledContainerBalance } from './walletBalance.styles';
+//Context
+import { PocketContext } from '../../../context/PocketContext';
 
 const WalletBalance = () => {
+
+    const { initialAmount, setInitialAmount, showRecharge, setUseRecharge } = useContext(PocketContext);
+    const [walletRecharge, setWalletRecharge] = useState(0);
+    const initialAmountInteger = parseInt(initialAmount);
+
+    const handleWalletRecharge = (e) => {
+        setWalletRecharge(e.target.value);
+    }
+
+    const newInitialAmount = () => {
+        const walletRechargeInteger = parseInt(walletRecharge);
+        const newValueInitialAmount = initialAmountInteger + walletRechargeInteger;
+        setInitialAmount(newValueInitialAmount);
+        setWalletRecharge();
+    }
+
     return (
         <StyledBalance>
             <Icon name="wallet" color="gray" size="25" marginTop="7" />
-            <Quantity weight="800" fontSize="40" >2.000.000</Quantity>
-            <ButtonIcon name="coin-dollar" size="25" />
-            <StyledContainerBalance>
-                <ModalMessage quantity />
-            </StyledContainerBalance>
+            <Quantity weight="800" fontSize="40" >{initialAmount}</Quantity>
+            <ButtonIcon onClick={() => setUseRecharge(true)} name="coin-dollar" size="25" />
+            {showRecharge && <StyledContainerBalance>
+                <ModalMessage quantity onClick={newInitialAmount} onChange={(e) => handleWalletRecharge(e) } />
+            </StyledContainerBalance>}
         </StyledBalance>
     );
 };
