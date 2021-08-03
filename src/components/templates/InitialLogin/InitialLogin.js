@@ -52,7 +52,7 @@ const InitialLogin = () => {
                 </StyledLoginRules>
             }   
             <Login />
-            <AccessHome onClick={updateWalletInfo} /> 
+            <AccessHome onClick={(e) => updateWalletInfo(e)} /> 
         </StyledDivInitialLogin>
     );
 };

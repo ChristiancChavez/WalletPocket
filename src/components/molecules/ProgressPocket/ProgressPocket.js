@@ -62,10 +62,9 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
     }
 
     const addPocketToList = () => {
-        setPocketList([...pocketList, { icon:{iconCategory}, name:{namePocket}, percentage:0, money:{amountPocket} }]);
+        setPocketList([...pocketList, {iconCategory, namePocket, amountPocket }]);
         setNamePocket('');
         setAmountPocket('');
-        console.log(pocketList, 'previus');
     }
     const showProgressVariation = (progress) => {
         return progress ? 
