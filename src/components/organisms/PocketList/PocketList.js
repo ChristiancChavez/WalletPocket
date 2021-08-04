@@ -11,9 +11,9 @@ const PocketList = ({ icon, name, percentage, money}) => {
         <StyledContainerPocket>
             <PocketInfo icon={icon} name={name} percentage={percentage} money={money} />
             <PocketAddition />
-            <StyledContainerMessage>
+            {false && <StyledContainerMessage>
                 <ModalMessage>¿Are you sure?, You'll remove this pocket</ModalMessage>
-            </StyledContainerMessage>
+            </StyledContainerMessage>}
         </StyledContainerPocket>
     );
 };

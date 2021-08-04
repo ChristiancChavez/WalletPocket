@@ -18,7 +18,7 @@ const fontWeight = (props) => {
 
 const StyledQuantity = styled.span`
   background: transparent;
-  color: white;
+  color: black;
   font-size: ${(props) => fontSize(props)};
   font-weight: ${(props) => fontWeight(props)};
   margin: 0 5px;

@@ -22,8 +22,8 @@ const PocketInfo = ({ icon, name, percentage, money, pocket }) => {
                 :
                 (
                     <>
-                        <Span fontSize="subtitle" children={name} color="gray" />
-                        <Quantity children={money} weight="bold" fontSize="20" />
+                        <Span fontSize="subtitle" color="gray">{name}</Span>
+                        <Quantity weight="bold" fontSize="20">{money}</Quantity>
                     </>
                 )}
             </StyledMoneyGoal>
