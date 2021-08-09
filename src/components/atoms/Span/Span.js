@@ -3,6 +3,7 @@ import React from "react";
 import { StyledSpan, StyledAnchor } from "./span.styles";
 
 const Span = ({ children, fontSize, weight, color, title, margin }) => {
+
   return (
     <>
       { title ? 

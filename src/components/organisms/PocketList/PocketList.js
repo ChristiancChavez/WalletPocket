@@ -8,8 +8,8 @@ import { StyledContainerPocket, StyledContainerMessage } from './pocketList.styl
 
 const PocketList = ({ icon, name, percentage, money}) => {
     return (
-        <StyledContainerPocket>
-            <PocketInfo icon={icon} name={name} percentage={percentage} money={money} />
+        <StyledContainerPocket >
+            <PocketInfo title icon={icon} name={name} percentage={percentage} money={money} />
             <PocketAddition />
             {false && <StyledContainerMessage>
                 <ModalMessage>¿Are you sure?, You'll remove this pocket</ModalMessage>
