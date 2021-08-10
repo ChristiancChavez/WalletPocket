@@ -8,9 +8,9 @@ import { PocketContext } from '../../../context/PocketContext';
 // Styles 
 import { StyledContainerAddition, StyledContainerIcons, StyledQuantityAdded } from './pocketAddition.styles';
 
-const PocketAddition = ({ quantity }) => {
+const PocketAddition = ({ quantity, goalPocket }) => {
 
-    const { pocketList, setPocketList  } = useContext(PocketContext);
+    const { pocketList, setPocketList, setPercentagePocket  } = useContext(PocketContext);
     const [showQuantityAdded, setShowQuantityAdded] = useState(false);
     const [valueAdditionPocketInput, setValueAdditionPocketInput] = useState(0);
     const [quantityGoalPocket, setQuantityGoalPocket] = useState(0);
@@ -18,7 +18,9 @@ const PocketAddition = ({ quantity }) => {
     const additionMoneyPocket = () => {
         const convertValueAddition = Number(valueAdditionPocketInput);
         const newQuantityGoalPocket = convertValueAddition + quantityGoalPocket;
-        setQuantityGoalPocket(newQuantityGoalPocket)
+        setQuantityGoalPocket(newQuantityGoalPocket);
+        const newPercentagePocket = (newQuantityGoalPocket * 100) / goalPocket;
+        setPercentagePocket(newPercentagePocket);
         setValueAdditionPocketInput(0);
         setShowQuantityAdded(false);
     }
@@ -41,7 +43,7 @@ const PocketAddition = ({ quantity }) => {
             </StyledContainerIcons>
             {showQuantityAdded && <StyledQuantityAdded>
                 <Input variantStyle="addition" placeholder="Pocket's addition" value={valueAdditionPocketInput} onChange={(e) => setValueAdditionPocketInput(e.target.value)} />
-                <ButtonIcon onClick={() => additionMoneyPocket()} name="checkmark" size="17" color="green" />
+                <ButtonIcon onClick={additionMoneyPocket} name="checkmark" size="17" color="green" />
                 <ButtonIcon onClick={() => setShowQuantityAdded(false)} name="cross" size="15" color="red" />
             </StyledQuantityAdded>}
         </StyledContainerAddition>

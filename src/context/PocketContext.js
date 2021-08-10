@@ -14,6 +14,7 @@ const PocketContextProvider = (props) => {
     const [showPanelPocket, setShowPanelPocket] = useState(false);
     const [showRecharge, setUseRecharge] = useState(false);
     const [walletRecharge, setWalletRecharge] = useState();
+    const [percentagePocket, setPercentagePocket] = useState('');
     useEffect(() => {
         window.localStorage.setItem('initialAmount', JSON.stringify(initialAmount));
     },[initialAmount]);
@@ -48,7 +49,9 @@ const PocketContextProvider = (props) => {
                 setUseRecharge,
                 walletRecharge, 
                 setWalletRecharge,
-                pocketList
+                pocketList,
+                percentagePocket, 
+                setPercentagePocket
             }}>
             {props.children}
         </PocketContext.Provider>
