@@ -18,11 +18,13 @@ const PocketAddition = ({ quantity, goalPocket }) => {
     const additionMoneyPocket = () => {
         const convertValueAddition = Number(valueAdditionPocketInput);
         const newQuantityGoalPocket = convertValueAddition + quantityGoalPocket;
-        setQuantityGoalPocket(newQuantityGoalPocket);
-        const newPercentagePocket = (newQuantityGoalPocket * 100) / goalPocket;
-        setPercentagePocket(newPercentagePocket);
-        setValueAdditionPocketInput(0);
-        setShowQuantityAdded(false);
+        if(newQuantityGoalPocket < goalPocket) {
+            setQuantityGoalPocket(newQuantityGoalPocket);
+            const newPercentagePocket = (newQuantityGoalPocket * 100) / goalPocket;
+            setPercentagePocket(newPercentagePocket);
+            setValueAdditionPocketInput(0);
+            setShowQuantityAdded(false);
+        }
     }
 
     const deletePocketUser = (e) => {

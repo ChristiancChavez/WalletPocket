@@ -9,12 +9,11 @@ import { StyledDivPocketsUser, StyledDivButtonShowPockets } from './pocketUser.s
 
 const PocketsUser = () => {
 
-    const {pocketList} = useContext(PocketContext);
+    const { pocketList } = useContext(PocketContext);
     const [showPocketList, setShowPocketList] = useState(false);
 
     const showPocketListUser = () => {
         setShowPocketList(!showPocketList);
-        console.log(pocketList);
     }
 
     return (
@@ -28,7 +27,7 @@ const PocketsUser = () => {
                             key={pocketListItem.namePocket} 
                             icon={pocketListItem.iconCategory} 
                             name={pocketListItem.namePocket} 
-                            percentage="50" 
+                            percentage={pocketListItem.percentage } 
                             money={pocketListItem.amountPocket} 
                         />)}
                 
