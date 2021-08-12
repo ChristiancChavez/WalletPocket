@@ -6,9 +6,9 @@ import StyledButonIcon from "./buttonIcon.styles";
 import IconsCollection from "../../../Helpers/IconsCollection";
 const ButtonIcon = ({ name, size, color, onClick }) => {
   return (
-    <StyledButonIcon onClick={onClick}>
+    <StyledButonIcon>
       <IconsCollection />
-      <Icon name={name} size={size} color={color} />
+      <Icon name={name} size={size} color={color} onClick={onClick} />
     </StyledButonIcon>
   );
 };

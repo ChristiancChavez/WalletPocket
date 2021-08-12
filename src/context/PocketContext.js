@@ -6,14 +6,16 @@ const PocketContextProvider = (props) => {
 
     const [initialAmount, setInitialAmount] = useState(JSON.parse(window.localStorage.getItem('initialAmount')) || 0);
     const [userNameWallet, setUserNameWallet] = useState(JSON.parse(window.localStorage.getItem('userNameWallet')) || '');
-    const [pocketList, setPocketList] = useState(JSON.parse(window.localStorage.getItem('pocketList')) || [])
+    const [pocketList, setPocketList] = useState(JSON.parse(window.localStorage.getItem('pocketList')) || []);
+    const [budget, setBudget] = useState(0);
     const [showHome, setShowHome] = useState(false);
     const [showLoginValidation, setShowLoginValidation] = useState(false);
     const [nameIconCategory, setNameIconCategory] = useState('');
     const [iconCategory, setIconCategory] = useState('');
     const [showPanelPocket, setShowPanelPocket] = useState(false);
-    const [showRecharge, setUseRecharge] = useState(false);
+    const [showRecharge, setShowRecharge] = useState(false);
     const [walletRecharge, setWalletRecharge] = useState();
+    const [percentagePocket, setPercentagePocket] = useState('');
     useEffect(() => {
         window.localStorage.setItem('initialAmount', JSON.stringify(initialAmount));
     },[initialAmount]);
@@ -45,10 +47,14 @@ const PocketContextProvider = (props) => {
                 iconCategory, 
                 setIconCategory,
                 showRecharge, 
-                setUseRecharge,
+                setShowRecharge,
                 walletRecharge, 
                 setWalletRecharge,
-                pocketList
+                pocketList,
+                percentagePocket, 
+                setPercentagePocket,
+                budget, 
+                setBudget
             }}>
             {props.children}
         </PocketContext.Provider>

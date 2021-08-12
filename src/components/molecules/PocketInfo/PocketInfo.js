@@ -7,7 +7,7 @@ import PocketProgress from '../ProgressPocket/ProgressPocket';
 import { StyledPocketInfo, StyledMoneyGoal } from './pocketInfo.styles';
 import Input from '../../atoms/Input/Input';
 
-const PocketInfo = ({ icon, name, percentage, money, pocket }) => {
+const PocketInfo = ({ icon, name, percentage, money, pocket, elementRef }) => {
     return (
         <StyledPocketInfo>
             <PocketProgress icon={icon} progress percentage={percentage} />
@@ -22,8 +22,8 @@ const PocketInfo = ({ icon, name, percentage, money, pocket }) => {
                 :
                 (
                     <>
-                        <Span fontSize="subtitle" children={name} color="gray" />
-                        <Quantity children={money} weight="bold" fontSize="20" />
+                        <Span fontSize="subtitle" color="gray">{name}</Span>
+                        <Quantity weight="bold" fontSize="20">{money}</Quantity>
                     </>
                 )}
             </StyledMoneyGoal>

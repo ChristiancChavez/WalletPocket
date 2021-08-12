@@ -10,7 +10,14 @@ export const StyledBalance = styled.div`
 `
 export const StyledContainerBalance = styled.div`
     position: absolute;
-    top: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+`
+
+export const StyledDivBudget = styled.div`
+    position: absolute;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, 50%);
 `

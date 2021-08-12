@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledContainerPocket = styled.div`
     display: flex;
     width: 80%;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     position: relative;
