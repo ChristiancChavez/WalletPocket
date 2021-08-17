@@ -15,8 +15,7 @@ export const StyledDivPocketsUser = styled.div`
     left: 2%;
     padding-top: 25px;
     box-shadow: 0 0 15px 2px grey;
-    //animation: showPocketList 3s ease-out;
-    transition: 3s all;
+    overflow-y: auto;
 `
 
 export const StyledDivButtonShowPockets = styled.div`

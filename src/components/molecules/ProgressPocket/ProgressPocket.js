@@ -62,7 +62,7 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
     }
 
     const addPocketToList = () => {
-        setPocketList([...pocketList, {iconCategory, namePocket, amountPocket, percentage }]);
+        setPocketList([...pocketList, {iconCategory, namePocket, amountPocket, percentage: percentage  }]);
         setNamePocket('');
         setAmountPocket('');
         setShowPanelPocket(false);
