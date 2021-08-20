@@ -20,30 +20,13 @@ export const StyledContainerSvg = styled.div`
     display: flex;
     flex-flow: column nowrap;
     justify-items: center;
+    border-radius: 50%;
+    border: 3px solid gray;
 `
 export const StyledSvgBar = styled.svg`
     width: 70px;
 `
-export const StyledCircleProgress = styled.circle`
-    width: 100%;
-    height: 100%;
-    stroke: #F9C70C;
-    stroke-width:15;
-    stroke-linecap: round;
-    fill: none;
-    stroke-dasharray: 430;
-    stroke-dashoffset: ${(props) => percentageCalc(props)};
 
-`
-
-export const StyledCircleRail = styled.circle`
-    width: 100%;
-    height: 100%;
-    stroke: lightgray;
-    stroke-width:15;
-    stroke-linecap: round;
-    fill: none;
-`
 export const StyledCategoryPocket = styled.div`
     width: 65px;
     height: 65px;

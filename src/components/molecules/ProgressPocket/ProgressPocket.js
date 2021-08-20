@@ -25,6 +25,7 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
     
     const [namePocket, setNamePocket] = useState('');
     const [amountPocket, setAmountPocket] = useState('');
+    const [percentageState, setPercentageState] = useState(0);
     
     const { setPocketList, setShowPanelPocket, setNameIconCategory, nameIconCategory, setIconCategory, iconCategory, pocketList } = useContext(PocketContext);
 
@@ -62,7 +63,7 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
     }
 
     const addPocketToList = () => {
-        setPocketList([...pocketList, {iconCategory, namePocket, amountPocket, percentage: percentage  }]);
+        setPocketList([...pocketList, {iconCategory, namePocket, amountPocket, percentageState }]);
         setNamePocket('');
         setAmountPocket('');
         setShowPanelPocket(false);
@@ -71,10 +72,7 @@ const PocketProgress = ({ progress, percentage, icon, category, createPocket }) 
         return progress ? 
         (   
             <StyledContainerSvg>
-                <StyledSvgBar viewBox="0 0 150 150">
-                    <StyledCircleRail r="67" cx="75" cy="75"></StyledCircleRail>
-                    <StyledCircleProgress r="67" cx="75" cy="75" percentage={percentage}></StyledCircleProgress>
-                </StyledSvgBar>
+                <StyledSvgBar viewBox="0 0 150 150" />
                 <Icon name={icon} position />
             </StyledContainerSvg>
         )

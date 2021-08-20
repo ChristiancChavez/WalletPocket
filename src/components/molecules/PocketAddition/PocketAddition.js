@@ -43,12 +43,13 @@ const PocketAddition = ({ goalPocket }) => {
     const updatePercentagePocket = (e, newPercentagePocket) => {
         const closestDivElement = e.target.closest("#styleContainerPocket");
         const pocketAdditionElement = closestDivElement.previousSibling;
-        const childPocketAdditionElement = pocketAdditionElement.lastChild;
-        const childSpanElement = childPocketAdditionElement.firstChild.innerText;
+        const childPocketAdditionElement = pocketAdditionElement.firstChild.firstChild;
+        childPocketAdditionElement.setAttribute("style", "background-color:#F9C70C;");
+        /* const childSpanElement = childPocketAdditionElement.firstChild.innerText;
         const filteredPocket = pocketList.filter(pocketItem => pocketItem.namePocket === childSpanElement);
-        const addPercetage = {...filteredPocket, percetage: newPercentagePocket}; 
-        setPocketList([...pocketList, addPercetage ]);
-        console.log(addPercetage, 'holaaaaaaaa');
+        //const addPercentagePocket = {...filteredPocket, ['percentageState']: newPercentagePocket};  
+        setPocketList([ ...pocketList, {...filteredPocket, 'percentageState': newPercentagePocket}]); */
+        console.log(pocketList);
     };
 
     const renderMessageGoalPocket = (renderMessageGoal) => {

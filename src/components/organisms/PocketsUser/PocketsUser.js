@@ -15,7 +15,6 @@ const PocketsUser = () => {
 
     const showPocketListUser = () => {
         setShowPocketList(!showPocketList);
-        console.log(pocketList);
     };
 
     const renderPocketList = () => {
