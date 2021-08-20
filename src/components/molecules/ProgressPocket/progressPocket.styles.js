@@ -1,10 +1,11 @@
 import styled  from 'styled-components';
 
+const defaultPercetage = 0;
 const percentageCalc = (props) => {
     if(! props.percentage){
-        return 430
+        return defaultPercetage;
     }
-    return `calc( 430 - ( 430 * ${props.percentage} ) / 100)`
+    return `${props.percentage}%`;
 }
 
 export const StyledDivBar = styled.div`
@@ -20,11 +21,22 @@ export const StyledContainerSvg = styled.div`
     display: flex;
     flex-flow: column nowrap;
     justify-items: center;
-    border-radius: 50%;
-    border: 3px solid gray;
+    border-radius: 8%;
+    border: 1px solid gray;
+    background: white;
+    height: 70px;
+    width: 70px;
+    position: relative;
 `
 export const StyledSvgBar = styled.svg`
     width: 70px;
+    background: #F9C70C;
+    border-radius: 10%;
+    height: 0;
+    transform: rotateX(360deg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
 `
 
 export const StyledCategoryPocket = styled.div`
