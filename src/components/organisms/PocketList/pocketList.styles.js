@@ -23,19 +23,3 @@ export const StyledContainerMessage = styled.div`
     left: 20%;
     z-index: 10;
 `
-
-
-export const StyledDivMessageReachGoal = styled.div`
-    background: rgba(10, 10, 10, 0.9);
-    width: 435px;
-    height: 95px;
-    display: flex; 
-    flex-flow: column nowrap; 
-    justify-content: center;
-    align-items: center;
-    z-index: 20;
-    top: 6%;
-    left: 2%;
-    position: absolute;
-    border-radius: 8px;
-`

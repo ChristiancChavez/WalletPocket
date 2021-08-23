@@ -16,9 +16,7 @@ const PocketContextProvider = (props) => {
     const [showRecharge, setShowRecharge] = useState(false);
     const [walletRecharge, setWalletRecharge] = useState();
     const [percentagePocket, setPercentagePocket] = useState('');
-    const [showReachedGoalPocket, setShowReachedGoalPocket] = useState(true);
-    const [renderMessageGoal, setRenderMessageGoal] = useState('');
-
+    
     useEffect(() => {
         window.localStorage.setItem('initialAmount', JSON.stringify(initialAmount));
     },[initialAmount]);
@@ -58,10 +56,6 @@ const PocketContextProvider = (props) => {
                 setPercentagePocket,
                 budget, 
                 setBudget,
-                showReachedGoalPocket, 
-                setShowReachedGoalPocket,
-                renderMessageGoal, 
-                setRenderMessageGoal
             }}>
             {props.children}
         </PocketContext.Provider>
