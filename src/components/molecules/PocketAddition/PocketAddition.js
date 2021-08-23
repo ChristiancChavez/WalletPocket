@@ -11,7 +11,7 @@ import { StyledContainerAddition, StyledContainerIcons, StyledQuantityAdded, Sty
 
 const PocketAddition = ({ goalPocket }) => {
 
-    const { pocketList, setPocketList } = useContext(PocketContext);
+    const { pocketList, setPocketList, setBudget, initialAmount } = useContext(PocketContext);
     const [showQuantityAdded, setShowQuantityAdded] = useState(false);
     const [valueAdditionPocketInput, setValueAdditionPocketInput] = useState(0);
     const [quantityGoalPocket, setQuantityGoalPocket] = useState(0);
@@ -28,6 +28,8 @@ const PocketAddition = ({ goalPocket }) => {
                 setValueAdditionPocketInput(0);
                 updatePercentagePocket(e, newPercentagePocket);
                 setShowQuantityAdded(false);
+                setBudget(initialAmount - newQuantityGoalPocket);
+
             } 
         } else {
             const newQuantityGoalPocket = convertValueAddition + quantityGoalPocket;
@@ -38,9 +40,9 @@ const PocketAddition = ({ goalPocket }) => {
             setShowReachedGoalPocket(true);
             setShowAdditionMoneyButton(false);
             setShowQuantityAdded(false);
+            setBudget(initialAmount - newQuantityGoalPocket);
         } 
 
-        
     };
 
     const updatePercentagePocket = (e, newPercentagePocket) => {

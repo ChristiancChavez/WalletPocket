@@ -27,7 +27,7 @@ export const StyledQuantityAdded = styled(StyledContainerAddition)`
 `
 export const StyledDivMessageReachGoal = styled.div`
     background: rgba(8, 8, 8, 0.7);
-    width: 395px;
+    width: 383px;
     height: 95px;
     display: flex; 
     flex-flow: column nowrap; 
