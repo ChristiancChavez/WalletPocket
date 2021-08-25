@@ -14,7 +14,7 @@ const PocketCategories = () => {
 
     const pocketCategoriesRender = (categoriesPockets) => {
         return categoriesPockets.map(categoriePockets => {
-            return <ProgressPocket icon={categoriePockets.icon} category={categoriePockets.category} key={categoriePockets.category} />
+            return <ProgressPocket {...categoriePockets} key={categoriePockets.category} />
         })
     }
 

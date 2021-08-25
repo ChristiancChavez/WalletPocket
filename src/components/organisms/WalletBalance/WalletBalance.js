@@ -21,9 +21,10 @@ const WalletBalance = () => {
 
     const newInitialAmount = () => {
         const walletRechargeInteger = parseInt(walletRecharge);
-        const newValueInitialAmount = initialAmountInteger + walletRechargeInteger;
+        const newValueInitialAmount = parseInt(initialAmountInteger + walletRechargeInteger);
+        const convertedBudget = parseInt(budget);
         setInitialAmount(newValueInitialAmount);
-        setBudget(newValueInitialAmount);
+        setBudget(convertedBudget + walletRechargeInteger);
         setShowRecharge(false);
         setWalletRecharge();
     }

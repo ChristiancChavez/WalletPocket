@@ -9,12 +9,17 @@ import Span from './../../atoms/Span/Span';
 
 const Login = () => {
 
-    const { setUserNameWallet, setInitialAmount, showLoginValidation } = useContext(PocketContext);
+    const { setUserNameWallet, setInitialAmount, showLoginValidation, setBudget } = useContext(PocketContext);
+
+    const setAmounts = (e) => {
+        setInitialAmount(e.target.value);
+        setBudget(e.target.value);
+    }
 
     return (
         <StyledDivLogin>
             <UserInput name="profile" placeholder="Type your name" onChange={(e) => setUserNameWallet(e.target.value)} />
-            <UserInput name="wallet" placeholder="Type your wallet's amount" onChange={(e) => setInitialAmount(e.target.value)} />
+            <UserInput name="wallet" placeholder="Type your wallet's amount" onChange={(e) => setAmounts(e)} />
             {showLoginValidation && 
                 <StyledDivMessage>
                     <Span fontSize="message" weight="category" color="red">Escribe o corrige tus datos para continuar</Span>
